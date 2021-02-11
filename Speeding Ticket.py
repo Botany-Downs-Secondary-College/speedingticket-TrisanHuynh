@@ -46,9 +46,13 @@ def enter_speeder():
             print("Please enter a number.")
     
     over_speed = speeding_speed - speed_limit
-    money_owed = over_speed * 5
 
-    print("{} is charged ${}.".format(new_speeder, money_owed))
+    if over_speed >= 30:
+        print("{} lose your license.".format(new_speeder))
+    money_owed = over_speed * 5
+    
+    elif over_speed <= 30:
+        print("{} is charged ${}.".format(new_speeder, money_owed))
 
     counter = 0
     counter += 1
